@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Will_PE6_ParsingAndFormatting", "Will_PE6_ParsingAndFormatting.csproj", "{355A87CE-3824-4BA2-AA5D-E6B9690207FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{355A87CE-3824-4BA2-AA5D-E6B9690207FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355A87CE-3824-4BA2-AA5D-E6B9690207FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355A87CE-3824-4BA2-AA5D-E6B9690207FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355A87CE-3824-4BA2-AA5D-E6B9690207FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7FC9F750-15AA-4EB1-9DC3-9C03693CB1B6}
+	EndGlobalSection
+EndGlobal
