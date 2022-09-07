@@ -10,7 +10,7 @@ namespace Will_HelloWorld
     // Author: Nick Will
     // Purpose: To demonstrate a basic understanding of output in C#
     // Restrictions: None
-    internal class Program
+    static internal class Program
     {
         // Method: Main
         // Purpose: To output a basic message
