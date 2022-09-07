@@ -46,7 +46,7 @@ namespace SquashTheBugs
                 else
                 {
                     Console.WriteLine(i / (i - 1.0));//added 1.0 to get actual decimal values
-                } //Logic error: cannot divide by zero
+                } //Run-time error: cannot divide by zero
 
                 // concatenate each number to allNumbers
                 allNumbers += i + " ";
