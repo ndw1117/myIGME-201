@@ -31,11 +31,15 @@ namespace Will_PE4_Mandelbrot
 
             do
             {
-                Console.Write("Enter start value for realCoord (default -0.6): ");
-                realCoordStart = double.Parse(Console.ReadLine());
+                do
+                {
+                    Console.Write("Enter start value for realCoord (default -0.6): ");
+                } while (!double.TryParse(Console.ReadLine(), out realCoordStart));
 
-                Console.Write("Enter an end value for realCoord (default 1.77): ");
-                realCoordEnd = double.Parse(Console.ReadLine());
+                do
+                {
+                    Console.Write("Enter an end value for realCoord (default 1.77): ");
+                } while (!double.TryParse(Console.ReadLine(), out realCoordEnd));
 
                 if (realCoordStart >= realCoordEnd)
                 {
@@ -54,11 +58,15 @@ namespace Will_PE4_Mandelbrot
 
             do
             {
-                Console.Write("Enter start value for imagCoord (default 1.2): ");
-                imagCoordStart = double.Parse(Console.ReadLine());
+                do
+                {
+                    Console.Write("Enter start value for imagCoord (default 1.2): ");
+                } while (!double.TryParse(Console.ReadLine(), out imagCoordStart));
 
-                Console.Write("Enter an end value for imagCoord (default -1.2): ");
-                imagCoordEnd = double.Parse(Console.ReadLine());
+                do
+                {
+                    Console.Write("Enter an end value for imagCoord (default -1.2): ");
+                } while (!double.TryParse(Console.ReadLine(), out imagCoordEnd));
 
                 if (imagCoordStart <= imagCoordEnd)
                 {
