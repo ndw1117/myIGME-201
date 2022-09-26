@@ -18,6 +18,13 @@ namespace Will_PE8_9
         //Restrictions: None
         static void Main(string[] args)
         {
+            byte byteVal;
+            short shortVal = -556;
+            byteVal = checked((byte)shortVal);
+            Console.WriteLine("byteVal = {0}", byteVal);
+
+
+
             string s = "";
 
             Console.Write("Enter a string: ");
