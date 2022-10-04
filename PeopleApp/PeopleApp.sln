@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleApp", "PeopleApp.csproj", "{703341E9-DD30-4955-BD55-ED96AC3BC9E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F2E57800-40DD-41F6-BB3B-E84832799652} = {F2E57800-40DD-41F6-BB3B-E84832799652}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleLib", "..\PeopleLib\PeopleLib.csproj", "{F2E57800-40DD-41F6-BB3B-E84832799652}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{703341E9-DD30-4955-BD55-ED96AC3BC9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703341E9-DD30-4955-BD55-ED96AC3BC9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703341E9-DD30-4955-BD55-ED96AC3BC9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703341E9-DD30-4955-BD55-ED96AC3BC9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E57800-40DD-41F6-BB3B-E84832799652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E57800-40DD-41F6-BB3B-E84832799652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E57800-40DD-41F6-BB3B-E84832799652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E57800-40DD-41F6-BB3B-E84832799652}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {274EC455-7DFB-46A2-BE81-C3D311ADCD64}
+	EndGlobalSection
+EndGlobal
