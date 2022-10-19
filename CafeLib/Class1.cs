@@ -181,5 +181,10 @@ namespace CafeLib
             this.marshmallows = marshmallows;
             this.source = "";
         }
+
+        public CupOfCocoa() : this(false)
+        {
+
+        }
     }
 }
