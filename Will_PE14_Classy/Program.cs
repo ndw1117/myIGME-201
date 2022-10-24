@@ -12,6 +12,7 @@ namespace Will_PE14_Classy
     //Restrictions: None
     internal class Program
     {
+
         public interface myInterface
         {
             void myMethod();

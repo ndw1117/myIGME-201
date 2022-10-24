@@ -1,0 +1,14 @@
+// {type:class}
+// {generate:true}
+// {direction:topDown}
+
+
+[+A:RugbyPlayer| -nickname:string; +position:int| +Nickname:string:r; +Run(); +Pass():a; +Tackle():a; +Offload():v;]
+[+I:Forward| Scrum(); PodAttack()]
+[+I:Back| BreakAway(); Kick()]
+[+EightMan| +isBigAndScary:bool| +Scrum(); +PodAttack(); +Pass():o; +Tackle():o; +Offload():o]
+[+StrongSideWing| +isFast:bool| +BreakAway(); +Kick(); +Pass():o; +Tackle():o; +Offload():o]
+[+A:RugbyPlayer]<-.-[+EightMan]
+[+A:RugbyPlayer]<-.-[+StrongSideWing]
+[+I:Forward]^[+EightMan]
+[+I:Back]^[+StrongSideWing]
