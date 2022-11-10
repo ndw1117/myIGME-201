@@ -127,7 +127,7 @@ namespace CourseList
             }
 
             // 12. clear the listview items
-            this.courseListView.Clear();
+            this.courseListView.Items.Clear();
 
             // 13. lock the listview to begin updating it
             this.courseListView.BeginUpdate();

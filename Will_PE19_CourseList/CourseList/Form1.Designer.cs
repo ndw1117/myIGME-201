@@ -117,6 +117,8 @@
             // 
             // courseListView
             // 
+            this.courseListView.BackColor = System.Drawing.SystemColors.Window;
+            this.courseListView.BackgroundImageTiled = true;
             this.courseListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.codeHdr,
             this.descHdr,
