@@ -122,7 +122,7 @@ namespace CourseList
             {
                 // 11. fetch the index of firstCourseCode from the Globals.courses.sortedList
                 // using the IndexOfKey method
-                int index = Globals.courses.sortedList.IndexOfKey(firstCourseCode);
+                nStartEl = Globals.courses.sortedList.IndexOfKey(firstCourseCode);
                 
             }
 
@@ -203,7 +203,7 @@ namespace CourseList
 
                 
                 // 31. if this row is the row that we are supposed to show at the top of the list
-                if (this.courseListView.TopItem == null)
+                if (lviCntr == nStartEl)
                 {
                     // 32. set this ListViewItem to selected
                     lvi.Selected = true;
@@ -241,7 +241,7 @@ namespace CourseList
             string courseCode = null;
 
             // 39. get the courseCode from the currently selected row
-            courseCode = lv.SelectedItems[0].Text;
+            courseCode = (String)lv.SelectedItems[0].Tag;
 
             // 40. get the course object associated with this courseCode from Globals.courses SortedList
             course = Globals.courses[courseCode];
@@ -292,7 +292,7 @@ namespace CourseList
                 try
                 {
                     // 51. get the courseCode from the currently selected row
-                    courseCode = lv.SelectedItems[0].Text;
+                    courseCode = (String)lv.SelectedItems[0].Tag;
 
                     // 52. get the course object associated with this courseCode from Globals.courses
                     course = Globals.courses[courseCode];
@@ -343,7 +343,7 @@ namespace CourseList
             try
             {
                 // 61. get the courseCode from the currently selected row
-                courseCode = lv.SelectedItems[0].Text;
+                courseCode = (String)lv.SelectedItems[0].Tag;
 
                 // 62. get the course object associated with this courseCode from courses
                 course = Globals.courses[courseCode];
@@ -380,7 +380,7 @@ namespace CourseList
             Course copyCourse = null;
 
             // get the original courseCode from the selected course in the courseListView
-            string origCourseCode = this.courseListView.SelectedItems[0].Text;
+            string origCourseCode = (String)this.courseListView.SelectedItems[0].Tag;
 
             // fetch the original Course object
             origCourse = Globals.courses[origCourseCode];
