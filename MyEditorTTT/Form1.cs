@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace MyEditor
 {
     public partial class Form1 : Form
     {
+        int originalTextLength = 0; //used to fix the issue of pre-loading the editor with text before the timed test.
+
         public Form1()
         {
             InitializeComponent();
@@ -35,6 +38,11 @@ namespace MyEditor
             this.richTextBox.SelectionChanged += new EventHandler(RichTextBox__SelectionChanged);
 
             this.toolStrip.ItemClicked += new ToolStripItemClickedEventHandler(ToolStrip__ItemClicked);
+
+            this.countdownLabel.Visible = false;
+
+            this.timer.Tick += new EventHandler(Timer__Tick);
+            this.testToolStripButton.Click += new EventHandler(TestToolStripButton__Click);
 
             this.Text = "MyEditor";
         }
@@ -228,6 +236,44 @@ namespace MyEditor
             }
 
             this.colorToolStripButton.BackColor = richTextBox.SelectionColor;
+        }
+
+        private void TestToolStripButton__Click(object sender, EventArgs e)
+        {
+            this.timer.Interval = 500;
+
+            this.toolStripProgressBar1.Value = 60;
+
+            this.countdownLabel.Text = "3";
+            this.countdownLabel.Visible = true;
+            this.richTextBox.Visible = false;
+
+            for (int i = 3; i > 0; --i)
+            {
+                this.countdownLabel.Text = i.ToString();
+                this.Refresh();
+                Thread.Sleep(1000);
+            }
+
+            this.countdownLabel.Visible = false;
+            this.richTextBox.Visible = true;
+
+            this.originalTextLength = richTextBox.TextLength;
+
+            this.timer.Start();
+
+        }
+        private void Timer__Tick(object sender, EventArgs e)
+        {
+            --this.toolStripProgressBar1.Value;
+
+            if (this.toolStripProgressBar1.Value == 0)
+            {
+                this.timer.Stop();
+
+                string performance = "Congratulations! You typed " + Math.Round((this.richTextBox.TextLength - this.originalTextLength) / 30.0, 2) + " letters per second!";
+                MessageBox.Show(performance);
+            }
         }
     }
 }
